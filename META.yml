@@ -1,0 +1,119 @@
+---
+abstract: 'Translate a ECMA source to an AST'
+author:
+  - 'Jean-Damien Durand <jeandamiendurand@free.fr>'
+build_requires:
+  ExtUtils::MakeMaker: 0
+  File::Spec: 0
+  File::Spec::Functions: 0
+  File::Temp: 0
+  IO::Handle: 0
+  IPC::Open3: 0
+  List::Util: 0
+  Test::More: 0
+configure_requires:
+  ExtUtils::MakeMaker: 6.30
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 4.300039, CPAN::Meta::Converter version 2.132830'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: MarpaX-Languages-ECMA-AST
+no_index:
+  directory:
+    - t
+    - xt
+    - examples
+    - blog
+provides:
+  MarpaX::Languages::ECMA::AST:
+    file: lib/MarpaX/Languages/ECMA/AST.pm
+    version: 0.001
+  MarpaX::Languages::ECMA::AST::Grammar:
+    file: lib/MarpaX/Languages/ECMA/AST/Grammar.pm
+    version: 0.001
+  MarpaX::Languages::ECMA::AST::Grammar::Base:
+    file: lib/MarpaX/Languages/ECMA/AST/Grammar/Base.pm
+    version: 0.001
+  MarpaX::Languages::ECMA::AST::Grammar::CharacterClasses:
+    file: lib/MarpaX/Languages/ECMA/AST/Grammar/CharacterClasses.pm
+    version: 0.001
+  MarpaX::Languages::ECMA::AST::Grammar::ECMA_262_5:
+    file: lib/MarpaX/Languages/ECMA/AST/Grammar/ECMA_262_5.pm
+    version: 0.001
+  MarpaX::Languages::ECMA::AST::Grammar::ECMA_262_5::Actions:
+    file: lib/MarpaX/Languages/ECMA/AST/Grammar/ECMA_262_5/Actions.pm
+    version: 0.001
+  MarpaX::Languages::ECMA::AST::Grammar::ECMA_262_5::Base:
+    file: lib/MarpaX/Languages/ECMA/AST/Grammar/ECMA_262_5/Base.pm
+    version: 0.001
+  MarpaX::Languages::ECMA::AST::Grammar::ECMA_262_5::CharacterClasses:
+    file: lib/MarpaX/Languages/ECMA/AST/Grammar/ECMA_262_5/CharacterClasses.pm
+    version: 0.001
+  MarpaX::Languages::ECMA::AST::Grammar::ECMA_262_5::Lexical:
+    file: lib/MarpaX/Languages/ECMA/AST/Grammar/ECMA_262_5/Lexical.pm
+    version: 0.001
+  MarpaX::Languages::ECMA::AST::Grammar::ECMA_262_5::Lexical::Actions:
+    file: lib/MarpaX/Languages/ECMA/AST/Grammar/ECMA_262_5/Lexical/Actions.pm
+    version: 0.001
+  MarpaX::Languages::ECMA::AST::Grammar::ECMA_262_5::Lexical::NumericLiteral:
+    file: lib/MarpaX/Languages/ECMA/AST/Grammar/ECMA_262_5/Lexical/NumericLiteral.pm
+    version: 0.001
+  MarpaX::Languages::ECMA::AST::Grammar::ECMA_262_5::Lexical::NumericLiteral::Actions:
+    file: lib/MarpaX/Languages/ECMA/AST/Grammar/ECMA_262_5/Lexical/NumericLiteral/Actions.pm
+    version: 0.001
+  MarpaX::Languages::ECMA::AST::Grammar::ECMA_262_5::Lexical::RegularExpressionLiteral:
+    file: lib/MarpaX/Languages/ECMA/AST/Grammar/ECMA_262_5/Lexical/RegularExpressionLiteral.pm
+    version: 0.001
+  MarpaX::Languages::ECMA::AST::Grammar::ECMA_262_5::Lexical::RegularExpressionLiteral::Actions:
+    file: lib/MarpaX/Languages/ECMA/AST/Grammar/ECMA_262_5/Lexical/RegularExpressionLiteral/Actions.pm
+    version: 0.001
+  MarpaX::Languages::ECMA::AST::Grammar::ECMA_262_5::Lexical::StringLiteral:
+    file: lib/MarpaX/Languages/ECMA/AST/Grammar/ECMA_262_5/Lexical/StringLiteral.pm
+    version: 0.001
+  MarpaX::Languages::ECMA::AST::Grammar::ECMA_262_5::Lexical::StringLiteral::Actions:
+    file: lib/MarpaX/Languages/ECMA/AST/Grammar/ECMA_262_5/Lexical/StringLiteral/Actions.pm
+    version: 0.001
+  MarpaX::Languages::ECMA::AST::Grammar::ECMA_262_5::Pattern::Actions:
+    file: lib/MarpaX/Languages/ECMA/AST/Grammar/ECMA_262_5/Pattern/Actions.pm
+    version: 0.001
+  MarpaX::Languages::ECMA::AST::Grammar::ECMA_262_5::Program:
+    file: lib/MarpaX/Languages/ECMA/AST/Grammar/ECMA_262_5/Program.pm
+    version: 0.001
+  MarpaX::Languages::ECMA::AST::Grammar::ECMA_262_5::Program::Actions:
+    file: lib/MarpaX/Languages/ECMA/AST/Grammar/ECMA_262_5/Program/Actions.pm
+    version: 0.001
+  MarpaX::Languages::ECMA::AST::Grammar::ECMA_262_5::Uri:
+    file: lib/MarpaX/Languages/ECMA/AST/Grammar/ECMA_262_5/Uri.pm
+    version: 0.001
+  MarpaX::Languages::ECMA::AST::Grammar::ECMA_262_5::Uri::Actions:
+    file: lib/MarpaX/Languages/ECMA/AST/Grammar/ECMA_262_5/Uri/Actions.pm
+    version: 0.001
+  MarpaX::Languages::ECMA::AST::Impl:
+    file: lib/MarpaX/Languages/ECMA/AST/Impl.pm
+    version: 0.001
+  MarpaX::Languages::ECMA::AST::Impl::Logger:
+    file: lib/MarpaX/Languages/ECMA/AST/Impl/Logger.pm
+    version: 0.001
+  MarpaX::Languages::ECMA::AST::Util:
+    file: lib/MarpaX/Languages/ECMA/AST/Util.pm
+    version: 0.001
+requires:
+  Carp: 0
+  Data::Dumper: 0
+  Exporter: 0
+  Log::Any: 0
+  Marpa::R2: 2.073
+  SUPER: 0
+  constant: 0
+  diagnostics: 0
+  parent: 0
+  perl: 5.010
+  strict: 0
+  warnings: 0
+resources:
+  bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=MarpaX-Languages-ECMA-AST
+  homepage: https://metacpan.org/release/MarpaX-Languages-ECMA-AST
+  repository: git://github.com/jddurand/marpax-languages-ecma-ast.git
+version: 0.001

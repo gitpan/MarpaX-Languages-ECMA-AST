@@ -1,0 +1,78 @@
+NAME
+    MarpaX::Languages::ECMA::AST - Translate a ECMA source to an AST
+
+VERSION
+    version 0.001
+
+SYNOPSIS
+        use strict;
+        use warnings FATAL => 'all';
+        use MarpaX::Languages::ECMA::AST;
+        use Log::Log4perl qw/:easy/;
+        use Log::Any::Adapter;
+        use Log::Any qw/$log/;
+        use Data::Dumper;
+        #
+        # Init log
+        #
+        our $defaultLog4perlConf = '
+        log4perl.rootLogger              = WARN, Screen
+        log4perl.appender.Screen         = Log::Log4perl::Appender::Screen
+        log4perl.appender.Screen.stderr  = 0
+        log4perl.appender.Screen.layout  = PatternLayout
+        log4perl.appender.Screen.layout.ConversionPattern = %d %-5p %6P %m{chomp}%n
+        ';
+        Log::Log4perl::init(\$defaultLog4perlConf);
+        Log::Any::Adapter->set('Log4perl');
+        #
+        # Parse ECMA
+        #
+        my $ecmaSourceCode = 'select * from myTable;';
+        my $ecmaAstObject = MarpaX::Languages::ECMA::AST->new();
+        $log->infof('%s', $ecmaAstObject->parse(\$ecmaSourceCode));
+
+DESCRIPTION
+    This module translates ECMA source into an AST tree. To assist further
+    process of the AST tree, the nodes of the AST are blessed according to
+    the ECMA grammar you have selected. (The default is 'ECMA-262-5'.) If
+    you want to enable logging, be aware that this module is using Log::Any.
+
+SUBROUTINES/METHODS
+  new($class, %options)
+    Instantiate a new object. Takes as parameter an optional hash of options
+    that can be:
+
+    grammarName
+        Name of a grammar. Default is 'ECMA-262-5'.
+
+  parse($self, $sourcep)
+    Get and AST from the ECMA source, pointed by $sourcep. This method will
+    call all the intermediary steps (lexical, transformation, evaluation)
+    necessary to produce the AST.
+
+SEE ALSO
+    Log::Any, Marpa::R2
+
+SUPPORT
+  Bugs / Feature Requests
+    Please report any bugs or feature requests through the issue tracker at
+    <https://rt.cpan.org/Public/Dist/Display.html?Name=MarpaX-Languages-ECMA
+    -AST>. You will be notified automatically of any progress on your issue.
+
+  Source Code
+    This is open source software. The code repository is available for
+    public review and contribution under the terms of the license.
+
+    <https://github.com/jddurand/marpax-languages-ecma-ast>
+
+      git clone git://github.com/jddurand/marpax-languages-ecma-ast.git
+
+AUTHOR
+    Jean-Damien Durand <jeandamiendurand@free.fr>
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2013 by Jean-Damien Durand.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
+

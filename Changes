@@ -1,0 +1,113 @@
+Changelog for MarpaX-Languages-ECMA-AST
+
+0.001 2013-10-26T16:01:25
+ [Jean-Damien Durand <jeandamiendurand@free.fr>]
+ - Package ignore fix
+ - Missing files for startup
+ - xtest compliance
+ - Program: optimizations
+ - StringNumericLiteral: Removed
+ - Regexp: removed
+ - Marpa::R2 2.073 minimum version required
+ - t/asi.t: remove STDERR prints
+ - Program: fix programCompleted flag
+ - Program: tracef() instead of trace()
+ - t: jquery, underscore, backbone
+ - Successful parsing of ECMAScript!
+ - Grrr... Missing lexeme_read
+ - Problem report
+ - Problem report
+ - Program: restore action values default
+ - t/asi.t : better output
+ - t: test.t deleted, asi.t created
+ - Program: Fixed logging for ASI, carify code
+ - Program: ASI again
+ - Program: use ^INVISIBLE_SEMICOLON instead of ^INVISIBLE_SEMICOLON$
+ - Program/Actions: Fake contact action
+ - Postinsert space instead of newline
+ - ASI new implementation
+ - Grammar/ECMA_262_5/Program: Remember last S
+ - Grammar/ECMA_262_5/Program: asi exception
+ - Grammar/Base: keep error string if any
+ - Grammar/ECMA_262_5/Program: Automatic Semicolon Insertion rule 3
+ - Program: fix grammar_source initialitation
+ - Systematically reserve a space at the end for an eventual semicolon
+   insertion
+ - Automatic Semicolon Insertion in the end callback
+ - Support of an end callback
+ - Grammar/ECMA_262_5/Program: apparent success of ASI for 1st case
+ - Program: work on ASI
+ - Base: read() and resume() are supposed to advance current position,
+   protect Base against calling a subclassed method
+ - Grammar/ECMA_262_5/Program: use new Base code
+ - Grammar/Base : refactorisation giving more liberty to callbacks
+ - Impl: added events()
+ - Program: full lexemisation (2)
+ - Program: full lexemisation
+ - Program: Comments about this grammar difficulties
+ - ECMA_262_5/Program: Removed a debug statement
+ - ECMA_262_5/Program: use lexemes for masked space rules
+ - Base: oups, removed debugging code
+ - Identifier Ambiguity trial
+ - More comments about RegularExpressionLiteral
+ - Slash ambiguity
+ - Base: move some logs to trace level
+ - Program: Big comment explaining the pb with RegularExpressionLiteral
+ - Grammar/Base: use $self in _show_last_expression
+ - Grammar/Base: cache $log->is_debug and use $self->_context
+ - Program: Added Missing (S) in PrimaryExpression, BreakStatement and
+   ReturnStatement
+ - Program: Added missing (S) in MemberExpression
+ - Program: Fixed SourceElement rule
+ - If error, say "last SourceElement" instead of "last expression"
+ - Prepare punctuator lexemisation
+ - Unified grammar in Program.pm modulo two injections
+ - Fix comment magic line
+ - Trying to merge everything in a single grammar
+ - StringLiteral: make it more readable
+ - StringLiteral: make it really independant
+ - Literal: Move __UnicodeLetter to its right section
+ - Program: put it comment things to remember
+ - Linking program and lexical grammars, comment divided explicitely in
+   singlelinet and multiline
+ - Removed entry
+ - Removed directory
+ - Move Program grammar one level higher
+ - Lexical/Program: grammar preparation
+ - Grammar/Base: Support of start and length
+ - Lexical: RegularExpressionLiteral injection
+ - StringLiteral: fix internal rules for correct injection
+ - Lexical: Injection of DecimalLiteral grammar
+ - Grammar/Base.pm: generic extract method
+ - Lexical/StringLiteral: fix :start rule
+ - Lexical: Injection of StringLiteral grammar
+ - Lexical: action RemoveUndefinedComment to get rid of comments not
+   translated to a LineTerminator, so they must be discarded
+ - Lexical: discard WhiteSpace
+ - Lexical: when MutilineComment becomes a LineTerminator
+ - Lexical: Back to :default ::= action => [values] bless => ::lhs
+ - Preparation of Lexical inner String grammar
+ - Removed unused dumb line
+ - Removed regexp in favour of a real grammar value for Lexical items that
+   need an inner grammar
+ - Added missing __OctalEscapeSequence and check StringLiteral at lexing
+   time
+ - Removed unused code
+ - Added IsZeroToThree and IsFourToSeven
+ - Added strict method
+ - Added IsOctalDigit, IsEight, IsNine
+ - Grammar refactor + strict mode check
+ - Make MultiLineComment and SingleLineComment production rules
+ - eval event callbacks so that error is pretty printed
+ - Fix for constaint "The source character immediately following a
+   NumericLiteral must not be an IdentifierStart or DecimalDigit.": I must
+   use the position
+ - Change some comments
+ - Factorization of character classes
+ - Call the super class
+ - Add $sourcep to events callback
+ - The source character immediately following a NumericLiteral must not be
+   an IdentifierStart or DecimalDigit.
+ - Factorization
+ - First commit : lexical grammar
+
